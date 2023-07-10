@@ -16,7 +16,9 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tridnguyen97.pythonanywhere.com'
+    ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
