@@ -16,6 +16,8 @@ User = get_user_model()
 
 @login_required(login_url="/vendor/sign-in")
 def home(request):
+    if not request.user.is_vendor:
+        return redirect("vendor:vendor_sign_out")
     vendor = Vendor.objects.get(user=request.user)
     orders = Order._default_manager.filter(
         status="Completed",

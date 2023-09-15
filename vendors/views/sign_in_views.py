@@ -7,5 +7,5 @@ class SignInView(LoginView):
     template_name = 'vendor/sign_in.html'
 
     def get_success_url(self):
-        if self.request.user.is_authenticated:
-            return '/vendor'
+        if self.request.user.is_authenticated and self.request.user.is_vendor:
+            return 'vendor:vendor_root'
