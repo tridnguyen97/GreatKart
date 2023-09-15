@@ -1,4 +1,4 @@
-from django_tables2 import Table
+from django_tables2 import Table, Column
 from store.models import Product
 from orders.models import Order
 

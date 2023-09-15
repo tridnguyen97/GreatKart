@@ -15,5 +15,6 @@ def list_order_view(request):
     table.paginate(page=request.GET.get("page", 1), per_page=5)
     return render(request, 'vendor/list_order.html', {
         'order_table': table,
+        'table_name': 'Order',
         'orders': completed_orders
     })

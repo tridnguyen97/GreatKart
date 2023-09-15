@@ -66,7 +66,8 @@ def list_product_view(request):
     table.paginate(page=request.GET.get("page", 1), per_page=5)
     return render(request, 'vendor/list_product.html', {
         'table': table,
-        'products': products
+        'table_name': 'Product',
+        'products': products,
     })
 
 def table(request):
